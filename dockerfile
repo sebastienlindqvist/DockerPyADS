@@ -1,6 +1,15 @@
-FROM python:3.8
+FROM ubuntu:latest
 
-RUN apt-get update && \
-      apt-get install -yq \
-              python-dev-is-python3 \
-              python3-pip
+WORKDIR /app
+#COPY . /app
+RUN apt-get update 
+RUN apt-get upgrade -y
+RUN apt-get install -y python3-full
+RUN apt-get install -y python3-pip
+RUN apt-get install -y pipx
+
+
+RUN pipx install numpy
+
+RUN pip --version  
+#just for test

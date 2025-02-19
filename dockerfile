@@ -7,7 +7,9 @@ apt-get install -y
 
 RUN apt-get install python3 && \
 apt-get install python3-pip -y && \
-pip3 install pyads && \
+apt-get clean all
+
+RUN pip3 install pyads && \
 pip3 install PyYAML && \
 pip3 install termcolor
 

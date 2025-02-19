@@ -2,11 +2,11 @@
 FROM osrf/ros:humble-desktop-full
 
 # Install the required packages
-RUN apt-get update && \
-apt-get upgrade -y
-
-RUN apt-get install -y python3
-RUN apt-get install -y python3-pip
+RUN apt-get update \
+ && apt-get install --assume-yes --no-install-recommends --quiet \
+        python3 \
+        python3-pip \
+ && apt-get clean all
 
 RUN pip3 install pyads && \
 pip3 install PyYAML && \

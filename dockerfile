@@ -1,15 +1,16 @@
-FROM ubuntu:latest
+FROM osrf/ros:humble-desktop-full
 
-WORKDIR /app
 #COPY . /app
-RUN apt-get update 
-RUN apt-get upgrade -y
-RUN apt-get install -y python3-full
+
+RUN apt-get update
+RUN apt-get install -y apt-transport-https \
+        python3
+
 RUN apt-get install -y python3-pip
-RUN apt-get install -y pipx
+#RUN apt-get install -y pipx
 
 
-RUN pipx install numpy
+#RUN pipx install numpy
 
-RUN pip --version  
+#RUN pip --version  
 #just for test

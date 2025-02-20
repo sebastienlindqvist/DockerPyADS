@@ -7,7 +7,7 @@ services:
     #command: /bin/sh -c "python3 ./main.py && python3 ./TwinAddRoute.py"
     #command: /bin/sh -c "python3 ./main.py"
 
-  #talker3:
-    #build:
-    #  dockerfile: dockerfile
+  talker3:
+    build:
+      dockerfile: dockerfile
     #command: /bin/sh -c "python3 ~/ros2_ws/src/py_srvcli/py_srvcli/TwinCAT_Add_Route.py"

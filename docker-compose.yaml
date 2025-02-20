@@ -11,3 +11,13 @@ services:
     build:
       dockerfile: dockerfile
     #command: /bin/sh -c "python3 ~/ros2_ws/src/py_srvcli/py_srvcli/TwinCAT_Add_Route.py"
+
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    networks:
+      - my-bridge-network
+
+networks:
+  my-bridge-network:
+    driver: bridge
